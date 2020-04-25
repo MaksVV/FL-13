@@ -1,0 +1,230 @@
+// $fontLight:'Hind', sans-serif;
+// $fontcolorLight: #2c2f3c;
+// $colorBtnLight: #699900;
+// $backgColMainLight:#fff;
+
+@mixin btn {
+    border: none;
+    color: white;
+    height: 50px;
+    padding: 15px 50px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font: 18px 'Source Sans Pro', sans-serif;
+    background-color: $colorBtnLight;
+    
+}
+
+@mixin link {
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+ 	font: 20px 'Source Sans Pro', sans-serif;
+
+ 	display: block;
+					color: #a1c3ce;
+					text-align: center;
+					font: 15px $fontLight;
+}
+
+body {
+	width: 1380px;
+	header {
+		background: url(../img/m-h-day.jpg) no-repeat;
+		border-radius: 0 0 40% 0; 
+	    height: 850px;
+	    width: 100%;
+	    .header-wrap {
+	    	margin-left: 190px;
+	    	.landing-logo {
+	    		padding-top: 30px;
+	    		display: flex;
+	    		flex-direction: row;
+	    		color:$fontcolorLight;
+	    		img {
+	    			height: 45px;
+	    			width: 45px;
+	    			padding-right: 10px;
+	    			
+	    		}
+	    		p {  
+	    			display: inline-block;
+	    			font-weight: bold;
+	    			margin: 0;
+	    			padding-top: 10px;
+	    			height: 45px;
+	    			width: 65px;
+	    			word-wrap: break-word;
+	    			text-align: center;
+	    			font-family:$fontLight;
+	    			font-size: 130%;
+	    			line-height: 0.8em;
+	    			span {
+                     	font-size: 50%;
+
+	    			}
+	    		}
+	    	}
+	    	.header_heading {
+				font:bold 64px 'Source Sans Pro', sans-serif;
+				width: 600px;
+				line-height: 1em;
+				color:$fontcolorLight;
+
+	    	}
+	    	.header_text {
+				font-family: $fontLight;
+				width:800px;
+				color:$fontcolorLight;
+				white-space: pre;
+				margin-left: -45px;
+		 	}
+		 	.header_button {
+		 		@include btn;
+		 		margin-top: 70px;
+		 	}
+		 	.login {
+		 		@include link;
+		 		padding-left: 150px;
+		 	}
+	    }
+	}
+	main {
+		height: 1100px;
+		margin-left: 190px;
+		background-color: $backgColMainLight;
+	    .section_text {
+	    	text-align: center;
+	    	font: 600 40px 'Source Sans Pro', sans-serif;
+	    	color: $fontcolorLight;
+	    	margin-left: -120px;
+	    }
+	    .section_card {
+			display: flex;
+			flex-direction: row;
+			width: 800px;
+			height: 210px;
+			padding: 20px;
+			background-color: #21232e;
+			margin: 20px 0 0 80px;
+			border-radius: 5px;
+
+			img {
+				border-radius: 5px;
+				width: 100%;
+				padding-right: 70px;
+			}
+			.section_card_right_container {
+				padding-right: 70px;
+				.section_card_heading{
+					text-align: center;
+					color: #fff;
+					font: 600 24px 'Source Sans Pro', sans-serif;
+					line-height: 1em;
+				}
+				.section_card_text{
+					font: 15px $fontLight;
+					text-align: justify;
+					color: #a1c3ce;
+				}
+				.section_link {
+					display: block;
+					color: #a1c3ce;
+					text-align: center;
+					font: 15px $fontLight;
+				}
+			}
+		}
+		.section_banner{
+			background: linear-gradient(to right, #649410, #2f5ecf);
+  			border-radius: 6px;
+  			display: flex;
+			flex-direction: row;
+  			height: 140px;
+  			width: 900px;
+  			text-align: left;
+  			margin-left: 50px;
+  			margin-top: 150px;
+  			line-height: 0.5em;
+  			z-index: 2;
+  			position: relative;
+			.section_banner_heading {
+				font:bold 30px 'Source Sans Pro', sans-serif;
+				width: 550px;
+				color:$fontcolorLight;
+				margin: 20px 0px 20px 100px;
+			}
+			.section_banner_text{
+				font: 15px $fontLight;
+				color: #a1c3ce;
+				margin: 20px 0px 20px 100px;
+
+			}
+			.section_banner_button{
+				@include btn;
+		 		margin-top: 45px;
+
+			}
+		}
+	}
+		
+	footer {
+		background-color: #21232e;
+		z-index: 1;
+		.footer-wrap{
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			margin-left: 190px;
+			padding-top: 100px;
+			.landing-logo {
+	    		display: flex;
+	    		flex-direction: row;
+	    		color: #a1c3ce;
+	    		height: 90px;
+	    		padding-right: 200px;
+	    		img {
+	    			height: 45px;
+	    			width: 45px;
+	    			padding-right: 10px;
+	    			
+	    		}
+	    		p {  
+	    			display: inline-block;
+	    			font-weight: bold;
+	    			margin: 0;
+	    			padding-top: 10px;
+	    			height: 45px;
+	    			width: 65px;
+	    			word-wrap: break-word;
+	    			text-align: center;
+	    			font-family:$fontLight;
+	    			font-size: 130%;
+	    			line-height: 0.8em;
+	    			span {
+                     	font-size: 50%;
+
+	    			}
+	    		}
+	    	
+			}
+			.footer_text {
+				color: #a1c3ce;
+				text-align: left;
+				margin: 0;
+				width: 250px;
+				padding-right: 200px;
+				font: 12px $fontLight;
+			}
+			.footer-cr {
+				color: #a1c3ce;
+				margin: 0;
+				padding: 10px 190px 10px 0;
+				padding-right: 190px;
+				font: 13px $fontLight;
+			}
+		}
+	}
+} 
